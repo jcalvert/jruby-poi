@@ -16,7 +16,9 @@ http://poi.apache.org/apidocs/org/apache/poi/hwpf/HWPFDocument.html
 
 Usage:
 ```ruby
-	irb(main):006:0> doc=JrubyPoi::Document.new("/Users/jcalvert/Downloads/Flavor96-2.doc")
+	require 'jruby-poi'
+	=> true
+	doc=JrubyPoi::Document.new("/Users/jcalvert/Downloads/Flavor96-2.doc")
 	=> #<Java::OrgApachePoiHwpf::HWPFDocument:0x35ba7dab>
 	doc.get_text.to_s
 	=> "\b\u0013 SHAPE  \\* MERGEFORMAT \u0014\b\u0001\u0015\r\rHello"
