@@ -9,7 +9,6 @@ module JrubyPoi
       Dir["#{jars_root}/*.jar"].each {|jar| require jar  }
     end
 
-  end
 end
 
 JrubyPoi.load_jars!
