@@ -1,3 +1,4 @@
+require 'delegate'
 module JrubyPoi
 
     def self.jars_root
@@ -18,7 +19,7 @@ java_import java.io.FileInputStream
 
 
 module JrubyPoi
-	class Document < Delegator
+	class Document < ::Delegator
 		def initialize(path)
 			fis = Java::OrgApachePoiPoifsFilesystem::POIFSFileSystem.new(Java::JavaIo::FileInputStream.new(path))
 			@doc = Java::OrgApachePoiHwpf::HWPFDocument.new(fs);
